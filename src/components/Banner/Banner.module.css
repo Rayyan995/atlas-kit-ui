@@ -1,0 +1,12 @@
+.Container{
+    padding-bottom: 10px;
+    border: 1px solid red;
+    width: 100%;
+    transition: padding 1s ease;
+}
+
+.OnClickStyle{
+    padding-bottom: 100px;
+    /* will-change: padding; */
+}
+

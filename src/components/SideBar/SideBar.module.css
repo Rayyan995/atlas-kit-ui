@@ -1,0 +1,18 @@
+.Container {
+    width: 25%;
+    background-color: #eeeeee;
+    border-right: 1px #dddddd solid;
+    height: 100%;
+}
+
+.Par {
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #555555;
+    cursor: pointer;
+}
+
+.Par:hover {
+    background-color: #eeffee;
+}

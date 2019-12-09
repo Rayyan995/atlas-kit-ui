@@ -1,0 +1,19 @@
+.Container{
+    display: flex;
+    flex-direction: row;
+    flex-grow: unset;
+    width: 80%;
+    margin: 60px auto;
+    border: 1px solid #dddddd;
+    height: 1000px;
+}
+
+.Paragraph  {
+    width: 100%;
+    padding: 15px;
+    background-color: #aaaaaa;
+    color: white;
+    text-align: center;
+    font-size: 20;
+    font-weight: bold;
+}
