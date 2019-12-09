@@ -7,11 +7,13 @@ import Avatar from '../components/Avatar/Avatar';
 import Blanket from '../components/Blanket/Blanket';
 import Button from '../components/Button/Button';
 import Calender from '../components/Calender/Calender';
+import Screen from '../components/UI/Screen/Screen';
+import CheckboxGroup from '../components/Checkbox/Checkbox';
 
 export class EntireBody extends Component<any, ReactNode> {
 
     state = {
-        content: <p className={classes.Paragraph} >Welcome to The Jungle!</p>
+        content: <Screen text="Welcome to The Jungle!" />
     }
     sideBarSelectHandler = (clickedBar: string) => {
         console.log(clickedBar);
@@ -28,6 +30,9 @@ export class EntireBody extends Component<any, ReactNode> {
                 break;
             case "calender":
                 this.setState({ content: <Calender /> })
+                break;
+            case "checkbox":
+                this.setState({ content: <CheckboxGroup /> })
                 break;
 
             default:

@@ -6,7 +6,7 @@ type myProps = {
     onClick: (clickedBar: string) => void
 }
 
-const SIDEBAR_ITEMS = ["avatar", "blanket", "button", "calender"]
+const SIDEBAR_ITEMS = ["avatar", "blanket", "button", "calender", "checkbox"]
 
 const SideBar: React.FC<myProps> = (props) => {
     return (
