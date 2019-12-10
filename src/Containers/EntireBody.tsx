@@ -59,6 +59,9 @@ export class EntireBody extends Component<any, ReactNode> {
             case "toggle":
                 this.setState({ content: <Toggle /> })
                 break;
+            case "toggle":
+                this.setState({ content: <Toggle /> })
+                break;
             case "tooltip":
                 this.setState({ content: <Tooltip /> })
                 break;
