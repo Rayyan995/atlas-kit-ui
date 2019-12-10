@@ -3,3 +3,5 @@
 2. Dropdown Menu: "Could not find a declaration file for module '@atlaskit/dropdown-menu'. "
 
 3. Form: "Could not find a declaration file for module '@atlaskit/form'. "
+
+4. Tooltip

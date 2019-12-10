@@ -3,13 +3,7 @@ import React from 'react';
 import classes from './SideBar.module.css';
 
 /**
- * form
- * 
  * progress tracker
- * select
- * pagination
- * tabs
- * toggle
  * tooltip
  */
 
@@ -19,7 +13,7 @@ type myProps = {
 }
 
 const SIDEBAR_ITEMS = ["avatar", "blanket", "button", "calender", "checkbox",
-"drawer","flag", "inlineEdit"]
+"drawer","flag", "inlineEdit", "pagination", "tabs", "toggle", "tooltip"]
 
 const SideBar: React.FC<myProps> = (props) => {
     let _class = classes.Container;

@@ -12,6 +12,10 @@ import CheckboxGroup from '../components/Checkbox/Checkbox';
 import Drawer from '../components/Drawer/Drawer';
 import Flag from '../components/Flag/Flag';
 import InlineEdit from '../components/InlineEdit/InlineEdit';
+import Pagination from '../components/Pagination/Pagination';
+import Tabs from '../components/Tabs/Tabs';
+import Toggle from '../components/Toggle/Toggle';
+import Tooltip from '../components/Tooltip/Tooltip';
 
 export class EntireBody extends Component<any, ReactNode> {
 
@@ -45,6 +49,18 @@ export class EntireBody extends Component<any, ReactNode> {
                 break;
             case "inlineEdit":
                 this.setState({ content: <InlineEdit /> })
+                break;
+            case "pagination":
+                this.setState({ content: <Pagination /> })
+                break;
+            case "tabs":
+                this.setState({ content: <Tabs /> })
+                break;
+            case "toggle":
+                this.setState({ content: <Toggle /> })
+                break;
+            case "tooltip":
+                this.setState({ content: <Tooltip /> })
                 break;
 
             default:
