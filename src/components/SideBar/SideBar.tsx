@@ -27,7 +27,7 @@ const SideBar: React.FC<myProps> = (props) => {
                     <p
                         key={item}
                         onClick={() => props.onClick(item)}
-                        className={classes.Par} >{item} example</p>
+                        className={classes.Par} >{item}</p>
                 ))
             }
         </div>

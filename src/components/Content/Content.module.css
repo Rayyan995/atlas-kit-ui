@@ -1,7 +1,13 @@
 .Container {
     width: 70%;
-    /* background-color: #e0e0e0; */
     height: 100%;
-    padding: 20px;
-    overflow: hidden;
+    padding: 10px;
+    overflow: scroll;
+}
+
+@media(max-width: 500px) {
+    .Container {
+        width: 75%;
+        padding: 0;
+    }
 }
