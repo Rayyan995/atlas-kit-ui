@@ -9,6 +9,9 @@ import Button from '../components/Button/Button';
 import Calender from '../components/Calender/Calender';
 import Screen from '../components/UI/Screen/Screen';
 import CheckboxGroup from '../components/Checkbox/Checkbox';
+import Drawer from '../components/Drawer/Drawer';
+import Flag from '../components/Flag/Flag';
+import InlineEdit from '../components/InlineEdit/InlineEdit';
 
 export class EntireBody extends Component<any, ReactNode> {
 
@@ -34,6 +37,15 @@ export class EntireBody extends Component<any, ReactNode> {
             case "checkbox":
                 this.setState({ content: <CheckboxGroup /> })
                 break;
+            case "drawer":
+                this.setState({ content: <Drawer onClick={this.sideBarSelectHandler} /> })
+                break;
+            case "flag":
+                this.setState({ content: <Flag /> })
+                break;
+            case "inlineEdit":
+                this.setState({ content: <InlineEdit /> })
+                break;
 
             default:
                 this.setState({ content: <p className={classes.Paragraph} >Welcome to The Jungle!</p> })
@@ -43,7 +55,7 @@ export class EntireBody extends Component<any, ReactNode> {
     render() {
         return (
             <div className={classes.Container} >
-                <SideBar onClick={this.sideBarSelectHandler} />
+                <SideBar onClick={this.sideBarSelectHandler} drawer={false} />
                 <Content>{this.state.content}</Content>
             </div>
         )

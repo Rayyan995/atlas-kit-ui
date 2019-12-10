@@ -75,7 +75,7 @@ export default class CheckboxGroup extends PureComponent<any, stateType> {
         for (const color in this.state.checkboxes) {
             const colorState = { ...(this.state.checkboxes as any) }[color];
             if(colorState.checked) {
-                colors.push(colorState.name)
+                colors.push(colorState.label)
             }
         }
         alert("You checked: " + colors.toString().replace(/,/g, " - "));
@@ -84,7 +84,7 @@ export default class CheckboxGroup extends PureComponent<any, stateType> {
     render() {
         let colors: colorsTypeArr[] = []
         for (const color in this.state.checkboxes) {
-            colors.push(({ ...(this.state.checkboxes as any) })[color])
+            colors.push({ ...(this.state.checkboxes as any) }[color])
         }
 
         return (
