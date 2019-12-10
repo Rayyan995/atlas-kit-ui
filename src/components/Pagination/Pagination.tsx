@@ -6,6 +6,7 @@ import Pagination from '@atlaskit/pagination';
 import Avatar from '../Avatar/Avatar';
 import InlineEdit from '../InlineEdit/InlineEdit';
 import Calender from '../Calender/Calender';
+import classes from './Pagination.module.css'
 
 const PAGES = [
   {
@@ -23,21 +24,21 @@ const PAGES = [
 ];
 
 const Dashboard = () => (
-  <div>
+  <div  className={classes.Pagination} >
     <h1>Avatar</h1>
     <Avatar />
     <PaginationWithSelectPage pageSelected={0} />
   </div>
 );
 const About = () => (
-  <div>
+  <div  className={classes.Pagination} >
     <h1>Calender</h1>
     <Calender />
     <PaginationWithSelectPage pageSelected={1} />
   </div>
 );
 const Contact = () => (
-  <div>
+  <div  className={classes.Pagination} >
     <h1>InlineEdit</h1>
     <InlineEdit />
     <PaginationWithSelectPage pageSelected={2} />
@@ -88,7 +89,7 @@ const PaginationWithSelectPage = ({
 }: {
   pageSelected: number;
 }) => (
-    <div style={{ marginTop: `${gridSize() * 3} px` }}>
+    <div className={classes.Test} >
       <Pagination
         innerStyles={{ marginTop: '24px' }}
         getPageLabel={(page: any) =>
@@ -109,13 +110,15 @@ const PaginationWithSelectPage = ({
 export default class WithReactRouterLink extends Component<{}> {
   render() {
     return (
-      <HashRouter>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/" isExact component={Dashboard} />
-        </Switch>
-      </HashRouter>
+      <div className={classes.Container} >
+        <HashRouter>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" isExact component={Dashboard} />
+          </Switch>
+        </HashRouter>
+      </div>
     );
   }
 }
